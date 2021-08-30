@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<p>データファイルは「コンマ区切りのクロマトグラム」が入ったtxtファイルを選択してください</p>
+
+<form action="/transform" method="post" enctype="multipart/form-data">
+    <input type="file" name="data_file" />
+    <input type="submit" />
+</form>
+
+{% endblock %}
