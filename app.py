@@ -4,7 +4,7 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg
 import matplotlib.pyplot as plt
 from datetime import datetime, date
 import re
-from flask import Flask, render_template, request, redirect, flash
+from flask import Flask, render_template, request, redirect, flash, send_file, make_response, send_from_directory
 from flask.helpers import make_response
 from werkzeug.utils import secure_filename
 import pandas as pd
@@ -64,16 +64,11 @@ def transform(txt_data):
     ax.set_ylim([a, b])
     ax.set_xlim([0, time])
     fig.tight_layout()
+    fig.savefig("test.pdf")
 
-    canvas = FigureCanvasAgg(fig)
-    buf = BytesIO()
-    canvas.print_png(buf)
-    graph_data = buf.getvalue()
-    response = make_response(graph_data)
-    response.headers['Content-Type'] = 'image/jpeg'
-    response.headers['Content-Length'] = len(graph_data)
-    with PdfPages('/../Downloads/sample.pdf') as pdf:
-        pdf.savefig(fig)
+    response = make_response(open("test.pdf", "rb").read())
+    response.headers['Content-Disposition'] = 'attachment; filename=test.pdf'
+    response.mimetype = "application/pdf"
     return response
 
 
@@ -100,4 +95,4 @@ def transform_view():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
