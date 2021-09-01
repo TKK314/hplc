@@ -14,25 +14,6 @@ matplotlib.use('Agg')
 app = Flask(__name__)
 
 
-class Note:
-    def __init__(self, data):
-        self.fig = plt.figure()
-        self.data = data
-
-    def mix(self, num, time, a, b):
-        t1 = self.data[num-1][0].iloc[:, 0]
-        t2 = self.data[num-1][1].iloc[:, 0]
-        y1 = self.data[num-1][0].iloc[:, 1]
-        y2 = self.data[num-1][1].iloc[:, 1]
-
-        ax = self.fig.add_subplot(3, 1, num)
-        ax.plot(t1, y1, color="black", linewidth=0.8)
-        ax.plot(t2, y2, color="gray", linewidth=0.8)
-        ax.set_ylim([a, b])
-        ax.set_xlim([0, time])
-        self.fig.tight_layout()
-
-
 def transform(txt_data):
     pulify1 = re.split("\r\n\r\n", txt_data.split(
         'R.Time (min),Intensity')[1])[0]
