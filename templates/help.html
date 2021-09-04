@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<p id="explanation">データファイルは「コンマ区切りのクロマトグラム」が入ったtxtファイルを選択してください</p>
+
+1.ファイル<br>
+2.データのエクスポート<br>
+3.ASCIIデータ出力<br>
+4.クロマトグラムにチェック<br>
+5.区切り文字を「カンマ」に設定（デフォルトはタブ）<br>
+6.出力<br>
+
+<br>
+<br>
+という作業を行ってください
+<br>
+<br>
+<form method="get" enctype="multipart/form-data" >
+  <input type="submit" value="ホームへ" formaction="/" class="button">    
+</form>
+{% endblock %}

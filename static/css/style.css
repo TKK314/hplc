@@ -1,0 +1,143 @@
+* {
+  font-family: Hiragino Kaku Gothic Pro;
+  font-size: 1.5vh;
+}
+.header {
+  border-bottom: 5px solid #d13e30;
+}
+.header p {
+  text-align: center;
+  font-size: 4vh;
+  color: #d13e30;
+  font-weight: bold;
+  margin: 0;
+}
+body {
+  max-width: 1350px;
+  min-width: 850px;
+  width: 90%;
+  margin: auto;
+}
+#explanation {
+  margin-top: 2vh;
+}
+.alert {
+  background-color: #f9c4c0;
+}
+.file_input {
+  margin: 5px;
+}
+#graph_area {
+  margin-top: 3vh;
+  display: flex;
+  width: 100%;
+}
+.img_area {
+  width: 70%;
+}
+.img_area img {
+  width: 100%;
+}
+.form_area {
+  width: 30%;
+}
+.form_area form {
+  width: 100%;
+  height: 100%;
+}
+.table_area {
+  position: relative;
+  height: 33.33%;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  box-sizing: border-box;
+}
+.input_table {
+  position: absolute;
+  top: 10%;
+  height: 80%;
+  width: 100%;
+  border-collapse: collapse;
+  border: 0px none;
+  table-layout: auto;
+}
+.input_table th {
+  /* height: 1em; */
+  /* align-items: center; */
+  box-sizing: border-box;
+}
+.text {
+  text-align: center;
+}
+.input {
+  width: 100%;
+  height: 2em;
+  border: 1px solid gray;
+  text-align: center;
+  border-radius: 5px;
+}
+.input:focus {
+  border: 1px solid #d13e30;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #d13e30;
+}
+.update {
+  width: 100%;
+  text-align: right;
+}
+.button_area {
+  width: 100%;
+  margin-top: 10vh;
+  display: flex;
+}
+.form {
+  width: 50%;
+  text-align: center;
+}
+.hide {
+  width: 0;
+  height: 0;
+  border: 0 transparent;
+}
+.button {
+  width: 10em;
+  height: 4vh;
+  margin: auto;
+  margin-top: 5px;
+  padding-top: 0px;
+  text-align: center;
+  line-height: 35px;
+  color: #ffffff;
+  background: #2c8cf7;
+  border-bottom: 5px solid #2969b1;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+.button p {
+  font-size: 10px;
+}
+.button:hover {
+  background: #5ba6fb;
+}
+.button:active {
+  margin-top: 5px;
+  border-bottom: none;
+  border-bottom: 2px solid black;
+}
+.red {
+  background: #f23816;
+  border-bottom: 5px solid #bd2a0f;
+}
+.red:hover {
+  background: #f36a51;
+}
+.green {
+  background: #2aa699;
+  border-bottom: 5px solid #1d766d;
+}
+.green:hover {
+  background: #35d4c4;
+}

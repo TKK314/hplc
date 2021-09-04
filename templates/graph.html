@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<p id="explanation">各値を変更してEnterキーを押すと更新されます</p>
+<div id="graph_area">
+    <div class="img_area">
+        <img src="data:image/png:base64,{{ img_data }}"/>
+    </div>
+
+    <div class="form_area">
+        <form method="post" enctype="multipart/form-data">
+            <input type="number" name="size" value="{{size}}" class="hide">
+            {% for i in range(size)%}
+                <div class="table_area">
+                    <table border="1" class="input_table">
+                        <tr height="33%">
+                        <th class="text">分</th>
+                        <th><input type="number" name="time{{i}}" value="{{param[i].time}}" class="input"/></th>
+                        </tr>
+                        <tr>
+                            <th class="text">range</th>
+                            <th><input type="number" name="a{{i}}" value="{{param[i].a}}" class="input"/></th>
+                            <th>〜</th>
+                            <th><input type="number" name="b{{i}}" value="{{param[i].b}}" class="input"/></th>
+                        </tr>
+                    </table>
+                </div>
+            {% endfor %}
+            <div class="update">
+                <input type="submit" value="更新" formaction="/drowgraph" class="hide"/>
+            </div>
+        </form>
+    </div>
+
+    
+</div>
+<div class="button_area">
+    
+    <form method="get" enctype="multipart/form-data" class="form">
+        <input type="submit" value="戻る" formaction="/" class="button">    
+    </form>
+    <form method="post" enctype="multipart/form-data" class="form">
+        <input type="submit" value="PDFとして保存" formaction="/save" class="button green">    
+    </form>
+    
+</div>
+{% endblock %}

@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<p>データファイルは「コンマ区切りのクロマトグラム」が入ったtxtファイルを選択してください</p>
-
-<form action="/transform" method="post" enctype="multipart/form-data">
-    <input type="file" name="data_file" />
-    <input type="submit" />
+<p id="explanation">データファイルは「コンマ区切りのクロマトグラム」が入ったtxtファイルを選択してください　<a href="/help"><i class="far fa-question-circle"></i></a></p>
+{% if message %}
+    <p class="alert">{{message}}</p>
+{% endif %}
+<form action="/drowgraph" method="post" enctype="multipart/form-data">
+    <input type="file" name="data_file" multiple="multiple" class="file_input"/>    
+    <input type="submit" value="グラフ出力" class="button"/>
 </form>
-
 {% endblock %}
