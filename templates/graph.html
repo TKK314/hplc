@@ -14,15 +14,26 @@
                 <div class="table_area">
                     <table border="1" class="input_table">
                         <tr height="33%">
-                        <th class="text">分</th>
+                        <th class="text">分　</th>
                         <th><input type="number" name="time{{i}}" value="{{param[i].time}}" class="input"/></th>
                         </tr>
                         <tr>
-                            <th class="text">range</th>
+                            <th class="text">UV　</th>
                             <th><input type="number" name="a{{i}}" value="{{param[i].a}}" class="input"/></th>
                             <th>〜</th>
                             <th><input type="number" name="b{{i}}" value="{{param[i].b}}" class="input"/></th>
                         </tr>
+                        {% if param[i].c !=0 or param[i].d !=0 %}
+                            <tr>
+                                <th class="text">RI　</th>
+                                <th><input type="number" name="c{{i}}" value="{{param[i].c}}" class="input"/></th>
+                                <th>〜</th>
+                                <th><input type="number" name="d{{i}}" value="{{param[i].d}}" class="input"/></th>
+                            </tr>
+                        {% else %}
+                            <input type="number" name="c{{i}}" value="{{param[i].c}}" class="hide"/>
+                            <input type="number" name="d{{i}}" value="{{param[i].d}}" class="hide"/>
+                        {% endif %}
                     </table>
                 </div>
             {% endfor %}
