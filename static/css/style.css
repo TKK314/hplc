@@ -44,6 +44,7 @@ body {
 }
 .form_area {
   width: 30%;
+  padding: auto;
   height: 100%;
 }
 .form_area form {
@@ -101,7 +102,7 @@ body {
   display: flex;
 }
 .form {
-  width: 50%;
+  margin: auto;
   text-align: center;
 }
 .hide {

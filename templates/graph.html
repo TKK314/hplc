@@ -53,6 +53,14 @@
     <form method="post" enctype="multipart/form-data" class="form">
         <input type="submit" value="PDFとして保存" formaction="/save" class="button green">    
     </form>
-    
+
+    {% if (size ==1)and (param[0].c !=0 or param[0].d !=0 ) %}
+    <form method="post" enctype="multipart/form-data" class="form">
+        <input type="submit" value="RIをPNGとして保存" formaction="/save_png_ri" class="button green">    
+    </form>
+    <form method="post" enctype="multipart/form-data" class="form">
+        <input type="submit" value="UVをPNGとして保存" formaction="/save_png_uv" class="button green">    
+    </form>
+    {% endif %}
 </div>
 {% endblock %}
