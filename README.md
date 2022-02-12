@@ -6,8 +6,7 @@
 txtファイル→pdfファイルへの変換を行います。
 
 # 実際の動作
-以下のような動作で動きます
-![demo](https://raw.github.com/wiki/TKK314/hplc/images/Untitled.gif)
+![HPLCAppデモ](https://user-images.githubusercontent.com/75611809/153698119-27c63495-f048-4be4-8110-fbc0ca0b92bc.gif)
 # 使用方法
 
 1. `wiki/sample.txt`ファイルを選択し、出力ボタンを押します
