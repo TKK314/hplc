@@ -9,7 +9,7 @@ txtファイル→pdfファイルへの変換を行います。
 ![HPLCAppデモ](https://user-images.githubusercontent.com/75611809/153698119-27c63495-f048-4be4-8110-fbc0ca0b92bc.gif)
 # 使用方法
 
-1. `wiki/sample.txt`ファイルを選択し、出力ボタンを押します
+1. ファイルを選択し、出力ボタンを押します([sample.txt](https://github.com/TKK314/hplc/files/8052831/sample.txt))
 2. 各パラメータ（後述）を任意の値に変更し、Enterボタンで確定します
 3. 目的のグラフが描画されたらpdfとして出力ボタンを押し保存します
 
